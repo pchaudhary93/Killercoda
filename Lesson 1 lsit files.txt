@@ -1,0 +1,48 @@
+Lesson 1: list files
+This is the list command. It allows us... list the content of the directory. ls
+ls -l .
+
+
+- indicates that we will pass arguments. We have two ways here
+* - one dash informs the system that we will pass one letter argument, like 'l'
+* -- two dashes means that argument will contain more than one letter. Most commonly it will be an english word.
+
+l means long listing format.
+
+ls -n command. This works like ls -l, but it changes the user-friendly names to UIDs and GIDs.
+
+ls -a
+This command listed much more files than before. A lot of dotfiles! No matter what are they, at least, not now. But two of them needs to be explained.
+
+* .
+* ..
+
+The first, . simply means the current directory of the user.
+
+The second, .. means parent directory.
+
+Before we start, though, there is one concept we need to go through. Linux has differente timestamps, three, to be exact.
+
+* atime - the last time when file was accessed
+* mtime - last modification time. By modification we mean change in the file content.
+* ctime - last metadata modification time. We mean here - permissions change, location of the file, etc.
+Example how it looks is visible below
+
+$ date +%s
+1635797690
+$ date
+Mon 01 Nov 2021 08:14:52 PM UTC
+touch theNewestFile (this creates a new file)
+echo "hello world!" > file-02 (this will add something to the file)
+chmod 444 file-01 (this will change the permissions of the file)
+ls -lS it sorts files by size, largest are going first.
+ls --format=commas will print the files separated by commas. We can use shorter syntax and write.
+ls -lQ prints the filenames in quotes.
+ls -al --author prints the username of the creator of the file.
+ls -ald prints directories only. Very useful in some circumstances.
+ls -ali prints inodes (there will be a lesson about inodes).
+ls -alR recursively prints all subdirectories.
+ls -alr prints list in the reversed order. So,
+ls -alSr is printing.
+ls --version prints the version of the binary.
+ls --help
