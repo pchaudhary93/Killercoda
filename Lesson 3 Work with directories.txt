@@ -1,0 +1,44 @@
+Lesson 3: Work with directories
+
+Create directories
+
+First, let's check what we have in our current directory.
+
+ls -l
+
+mkdir myfirstdirectory creates directory with provided name.
+
+Let's create 10 directories, starting with testdir1 to testdir10. How to do it in one command?
+
+mkdir testdir{1..10}
+
+With this syntax we are able to create 10 directories with the name contains numbers from 1 to 10. 
+Very handy.
+
+ls -l
+
+In order to create deeper structure, we have to use -p argument. This allows us to create the whole structure, without creating parent directory as first step.
+
+mkdir -p parentdir/childdir{01..100}
+
+In order to change the directory, we need to use cd command. As you can expect, it is Change Directory in short.
+
+cd parentdir
+
+ls
+
+There is another command to be sure where we currently are:
+pwd . This command shows your current work directory.
+
+We can come back to the previous directory. We can do it by typing
+cd .. .
+
+For example, we will remove the the root directory.
+
+rmdir root
+
+Now we used some arguments
+
+* -r means go recursively through directories (and treat everything as file)
+
+* -f - force. Another words, do not ask, assume the user knows what he is doing.

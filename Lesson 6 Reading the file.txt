@@ -1,0 +1,37 @@
+Lesson 6: Reading the file 
+
+1. cat and vim
+
+cat
+
+The most basic and I think, mostly used command is cat. As usual in linux the name of the file is a kind of contraction of a longer word, in this case - concatenate.
+
+vim and view
+
+Let's be honest. The true linux admin uses vim. Or even more, the true admin uses vi :) most modern distributions contains vi, vim (in fact in most cases, vi is replaced by vim), emacs, nano... here are many text editors available.
+
+It is important to understand one thing. cat just prints the file. vi is fully functional, very powerful text editor.
+
+Right, in order to exit vim, press ESC and then :q - what means quit.
+
+If you changed something in the file and you don't want to save the changes, press :q!.
+
+If you want to save these changes, press :wq - write and quit.
+
+more
+
+The first command which we can use in order to have better experience is more.
+
+less
+
+There is a more sophisticted tool to read the file. It is called less. This command gives us better navigation.
+
+head
+
+It we want to print first lines of the file, we can use head. By default head shows 10 lines.
+
+head testfile
+
+tail
+
+tail does exactly the same thing as heead does, but from the end of the file.

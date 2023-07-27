@@ -1,0 +1,21 @@
+Lesson 10: Create aliases 
+
+How to use alias
+
+Aliases give us a great possibility to "shape" command line to our needs. Let's suppose, we want to list all files in long format and with hidden files:
+
+ls -al
+
+alias shows all defined aliases in the session.
+
+let's remove the alias created during this lab:
+
+unalias lh
+
+Make alias permanent
+
+We have at least two ways of creating aliases "forever".
+
+First, take a look on .bashrc file.
+
+grep "alias " .bashrc

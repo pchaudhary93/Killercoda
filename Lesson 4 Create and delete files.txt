@@ -1,0 +1,44 @@
+Lesson 4: Create and delete files 
+
+Create file(s)
+
+In order to create empty file in Linux, we have to use touch command. Let's do it.
+
+touch testfile
+
+Of course, like in previous scenario, we can create multiple files.
+
+touch my{01..100}file
+
+Let's use the wildcard character * to list all of them
+
+ls my*file
+
+Let's now create some structure.
+
+mkdir testdir
+
+ touch testdir/mytest{01..1000} testdir/file{01..1000}
+
+Delete file(s)
+
+We already know the proper command. It is rm.
+
+Vim
+
+Ok, vim is not part of this lesson. But I'd like to make sure, that we understand that touch is not only one way to create files.
+
+Let's run
+
+vim mynewfile
+
+We opened a vim editor. We will have lessons about it later, now it is enough to follow the instructions.
+
+In order to start typing anything in editor (enter insert mode), hit
+i .
+
+Put some text, for example
+
+this is my great line
+
+Now, hit ESC key to enter the command mode, and type :wq

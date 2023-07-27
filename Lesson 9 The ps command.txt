@@ -1,0 +1,49 @@
+Lesson 9: The ps command 
+
+First look on the ps command
+
+As almost everything in Linux, ps is an abbreviation of Process status.
+
+The simplest execution is just without any argument
+
+ps
+
+With ps we can use arguments, quite obvious. But there is a trick. Normally, we use arguments with dash, like ls -l. But ps is different. It accepts argument with and without dash.
+
+Statuses
+
+This list is copied from manual, which I believe are most important to understand.
+
+* D - uninterruptible sleep (usually IO)
+
+* I - Idle kernel thread
+
+* R - running or runnable (on run queue)
+
+* S - interruptible sleep (waiting for an event to complete)
+
+* T - stopped by job control signal
+
+* t - stopped by debugger during the tracing
+
+* X - dead (should never be seen)
+
+* Z - defunct ("zombie") process, terminated but not reaped by its parent
+
+Some statuses may have the second letter. Let's list the most important
+
+* < - high-priority (not nice to other users)
+
+* N - low-priority (nice to other users)
+
+* s - is a session leader
+
+* l - is multi-threaded
+
+* + - is in the foreground process group
+
+To list all processes, use
+
+ps -A
+
+more information is in manual man ps

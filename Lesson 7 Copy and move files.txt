@@ -1,0 +1,26 @@
+Lesson 7: Copy and move files
+ 
+Copy files
+
+First, let's take a look how to copy the file. Copy, means that we copy existing file to the new filename or location.
+
+We used here a new command, tree. It recursively shows the content of the directory. Recursively means if there is a subdirectory, its content will be shown as well.
+
+cp
+
+The command to copy file is cp. The way how we use it is very simple:
+
+cp source target
+
+Copy and change the filename
+
+Obviously, we can use cp not just for copying files, but also changing the name of the target file.
+Right now let's take a look how we can copy two or so files in one shot.
+
+This is what we will do:
+
+cp file1tocopy file2copy file3tocopy targetlocation
+
+Move files
+
+Ok, we know ho to copy files. Sometimes however, we want to move the file from one place to another. For this case, we need to use mv command. The usage is quite similar to cp, but... simpler

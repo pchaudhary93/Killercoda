@@ -1,0 +1,16 @@
+Lesson 2: man
+
+
+man command.
+
+How to check, what sections/pages we have available?
+
+man -f ls
+
+man -f intro shows us multiple sections available.
+
+whatis ls shows short description of the functionality.
+
+man -k ls searches for the given command through all man pages, and returns all of them as output.
+
+man -w ls returns the location of the file from where the page is rendered.
