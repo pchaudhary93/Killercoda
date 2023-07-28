@@ -1,0 +1,63 @@
+Lesson 14: Work with logs
+
+Work with logs
+
+Logs are essential to understand what our system is doing. By default, all logs are stored in /var/log directory (or filesystem), however, every system has different approach to files structure.
+
+Standard view on logs
+
+Before systemd, we used to work with plain text logs only. Well, it is some generalisation, but in fact, all system logs of Linux were stored as plain text.
+
+Log name         Purpose
+
+syslog         
+
+The main system log. Contains all important information about the system and applications. Generally, if something is not writting its own logs, it will be here, in syslog.
+
+
+auth.log         
+
+Contains information about authorizations. All user login attempts (with information if successful or not), logout, password changes, remote logins and use of sudo.
+
+
+dmesg         
+
+is a kernel ring buffer, not the log (as we understand the logs). It allows us to interact with kernel and get information by querying bootup messages. It doesn't mean, that dmesg contains the booting data, but everything what is going on during the system's work.
+
+
+kern.log         
+
+Stores Kernel messages
+
+boot.log         
+
+Contains system' starting sequence (not kernel boot). Another words, information about started services, applications, disks configurations and so on.
+
+
+lastlog         file to be used with lastlog utility. Contains information abount last logins.
+
+
+faillog         similar to lastlog, use this file with faillog utility. Logs fails, like login failures.
+
+
+wtmp.log         Contains login infomration. However, it doesn't show information similar to lastlog, but used by other utilities, like who.
+
+
+dpkg.log         Contains data about packages management - install, remove, update, etc.
+
+
+With Systemd Linux delivered a new way of storing logs, journald service. Logs are not stored as text anymore, therefore we need a new utility in order to read these files. We can do it with journalctl utility.
+
+syslog message levels
+* 0: emerg
+* 1: alert
+* 2: crit
+* 3: err
+* 4: warning
+* 5: notice
+* 6: info
+* 7: debug
+
+emerg (emergency) is the highest level and shouldn't be used by applications. It means that system is unusable.
+
+debug is very often used during the development. Please remember that keeping logs where all messages in this level are stored may need special care about free space on your storage.

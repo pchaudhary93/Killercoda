@@ -1,0 +1,25 @@
+Lesson 16: Crontab
+
+What is crontab
+
+Although the title is about crontab, we start our story from something else - cron.
+
+Set the task in crontab
+
+Before we set the task, we need to learn about syntax. It is easy, but I think, you will need some time to memorize it :)
+
+We have a few elements here, we can go through them, one by one.
+
+* minute defines on which minute scheduler should execute the program. In our example above, it is 1 minute after specified hour.
+
+* hour defines hour for execution. In our example it is 5PM. Yes, Linux takes here 24 hours for a day.
+
+* day of the month as above, but for day in the month. In the example above it is 7th day of the month.
+
+* month as you can expect, the month. It may be a number, or text. In our example it is 4th month, so April. You can use apr.
+
+* weekday final option defines the weekday. In our example it is 2, what means Tuesday. Please remember, Sunday can be defined as 0 and 7 as well.
+
+Logs
+
+Different Linux distribution will log cronjob execution in different logs. Here, in Ubuntu, we need to go through /var/log/syslog.

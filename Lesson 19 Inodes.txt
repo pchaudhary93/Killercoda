@@ -1,0 +1,10 @@
+Lesson 19: Inodes
+
+Definition
+
+By definition, an inode is an index node. It serves as a unique identifier for a specific piece of metadata on a given filesystem, and the disk block location of this object.
+
+How many inodes do we have?
+Let's use the df command. It shows information about filesystem.
+
+Note the inode. now execute the same but for parent directory.

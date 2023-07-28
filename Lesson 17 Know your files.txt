@@ -1,0 +1,24 @@
+Lesson 17: Know your files
+
+
+Get information with file
+
+The first useful command is file. It is not the abreviation this time :)
+
+Here is a list of entities we will check in this lab:
+
+* empty text file
+
+* text file with content
+
+* directory
+
+* binary exacutable (i.e. /bin/bash)
+
+* packed file
+
+* /dev/vda (or another device)
+
+Get information with stat
+
+stat allows us to get diffeerent type of information than file. With file we can learn what is the type of the file. It determines the type, like file, directory, package, device etc, and if file type is confirmed, it tries to understand the language (based on some structures and strings).

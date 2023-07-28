@@ -1,0 +1,17 @@
+Lesson 20: Permissions
+
+Theory
+
+In this page we will go through the theory of the permissions.
+
+Permissions elements
+
+To make things a little bit complicated, not only the permission matrix is important. The full picture is composed from this matrix and information about owner (and the owning group) of this file.
+
+As picture explains, these three blocks are related to specific user or users.
+
+* Owner. This is the user who owns the file. Not necessairly the author, but current owner.
+
+* Group. Every file in Linux can have the distinct permissions for one, selected group. By default, this group is set to the owner's group, but it can be changed. For example, the config file of the application can have a owner (a user who uploaded it), but the application is not run by this user but special user (with special group). So, we can allow this group to have distinct access to this file.
+
+* Others. All other users in the system.

@@ -1,0 +1,35 @@
+Lesson 12: Your work history 
+
+History in command line
+
+If history is enabled (we will learn how to check and do it in next chapter) we can re-use previous commands.
+
+Arrows
+
+First, we can navigate through history with arrow up anfd arrow down. Please try to find cat .profile using arrows and then execute the command again.
+
+Files
+
+As you can expect, history is configured somewhere.
+
+In our Katacoda system we need to go through .bashrc file.
+
+Variables
+
+The setting from .bashrc file can be changed for single session by changing the valuer of the variables.
+
+We can print our variables using echo command (echo prints data on standard output):
+
+echo $HISTSIZE
+
+Clear history
+
+In order to clear the history, run
+
+history -c
+
+Disable history
+
+In order to disable history, run
+
+set +o history

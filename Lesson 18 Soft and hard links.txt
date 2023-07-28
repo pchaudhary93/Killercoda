@@ -1,0 +1,21 @@
+Lesson 18: Soft and hard links
+
+Soft and hard links
+
+In the previous lesson we mentioned links. It is time then, to explain them.
+
+Links are very powerful tool in Linux system and we can use them for many purposes. Probbly you are not aware of this, but your system is full of links, even now.
+
+We have two types of links. Hard and soft. It is imperative that you understand the difference between them.
+
+Theory
+
+We start with soft links. These links are easily visible in the system and we use soft links in wide applications in our work. Start with simply linking the objects between places, system uses soft links to configure specific versions of tools, to the system-related services configurations.
+
+Soft links
+
+We start with soft links. In source directory we have two files with the same content. Let's check one of them, which we will use in this chapter.
+
+Hard links
+
+Now we do similar actions but with hard links. We have another file in source directory. Whe this command will be executed

@@ -1,0 +1,17 @@
+Lesson 15: Streams
+
+Theory of streams
+
+Let's spend some time and understand what streams are. Look at right side of your screen. There is a command line with prompt waiting for interacting with you. This interaction is executed by two streams - output and input. To be more precise, we talk here about I/O streams. I/O - Input/Output.
+
+Standard input
+
+First stream is called standard input. Its file descriptor is 0. In short, we use the name STDIN. File descriptor... It means... Yes, everything in Linux is a file, STDIN as well.
+
+Standard output
+
+When STDIN is waiting for instructions passed to it, standard output displays responses from the system (in the simplest scenario). Its file descriptor is 1 and we name it STDOUT.
+
+Standard error
+
+The third stream is somehow special. It is standard error, with 2 as file descriptor. We call it STDERR.

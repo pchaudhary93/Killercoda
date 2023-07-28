@@ -1,0 +1,67 @@
+Lesson 13: Elevate privileges
+
+Normal user
+
+When we log in to Linux we are "normal" user. With limited access to programs, directories, etc.
+
+root
+
+Root is a master of the system. Root can do everything. Simply, it is an admin :)
+
+Change user
+
+Let's check who we are:
+
+whoami
+
+ id
+
+Ok, let's go back to the initial user - root.
+
+exit
+
+CTRL+c will quite the password prompt (or you can try 3 times to login).
+
+exit
+
+grep ^root /etc/passwd
+
+ grep ^root /etc/shadow
+
+The reason is simple. There is no password set for root.
+
+Elevate privileges
+
+When su log us as root, sudo elevates our privileges on behalf of root (let say it this way).
+
+Second method is to interactively use sudo mode and use elevated privileges in the full session (not command by command).
+
+sudo -i
+
+ ps
+
+-i argument means that we want to use sudo with login option, another words, to switch the session to privileged one.
+
+Sudo can be configured. In order to do so, we use /etc/sudoers file. Let's see it.
+
+clear
+
+ cat /etc/sudoers
+
+Edit sudoers file
+
+We can do it simply, by using your editor of choice, like vim:
+
+vim /etc/sudoers.
+
+sudo without password
+
+Ok, let's edit sudoers again with
+
+visudo
+
+and add this line:
+
+student2 ALL=(ALL:ALL) NOPASSWD:ALL
+
+It is easily noticeable, that we configured our second user with one difference - NOPASSWD. in this way we informed sudo, that this user doesn't need to confirm himself with password.
